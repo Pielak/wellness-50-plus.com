@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Wellness50Plus.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #FAF7F2;
+    --forest: #2C5F4A;
+    --forest-light: #3D7A60;
+    --forest-dark: #1A3D2E;
+    --gold: #C9973A;
+    --text-dark: #1C1C1A;
+    --text-mid: #4A4A45;
+    --text-light: #7A7A72;
+    --border: #E0D9CE;
+    --warm-white: #FFFDF9;
+  }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--text-dark); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  .top-bar { background: var(--forest-dark); color: #C8E6D4; text-align: center; padding: 10px 20px; font-size: 14px; }
+  .top-bar a { color: var(--gold); text-decoration: none; font-weight: 500; }
+  .container { max-width: 640px; margin: 0 auto; padding: 60px 24px 80px; }
+  .page-label { font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--forest); font-weight: 500; margin-bottom: 14px; display: block; }
+  h1 { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700; margin-bottom: 14px; }
+  .intro { color: var(--text-mid); font-weight: 300; margin-bottom: 48px; font-size: 17px; }
+  .form-group { margin-bottom: 24px; }
+  label { display: block; font-size: 14px; font-weight: 500; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 0.03em; }
+  input, textarea, select {
+    width: 100%;
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 13px 16px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  input:focus, textarea:focus { border-color: var(--forest); }
+  textarea { resize: vertical; min-height: 140px; }
+  .submit-btn {
+    display: inline-block;
+    background: var(--forest);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 15px 40px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    text-align: center;
+  }
+  .submit-btn:hover { background: var(--forest-light); }
+  .info-box {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 28px;
+    margin-top: 48px;
+  }
+  .info-box h2 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+  .info-box p { font-size: 15px; color: var(--text-mid); font-weight: 300; margin-bottom: 8px; }
+  .info-box a { color: var(--forest); }
+  .success-msg { display: none; background: #EBF5EF; border: 1px solid #C0DEC9; border-radius: 6px; padding: 18px 20px; color: var(--forest); font-size: 15px; margin-top: 20px; }
+  footer { background: var(--forest-dark); color: #6A9A7A; text-align: center; padding: 28px 24px; font-size: 13px; }
+  footer a { color: #8AB89A; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="top-bar"><a href="/">← Back to Wellness50Plus.com</a></div>
+<div class="container">
+  <span class="page-label">Get in Touch</span>
+  <h1>Contact Us</h1>
+  <p class="intro">Have a question about a product or need help? We typically respond within 1–2 business days.</p>
+
+  <form onsubmit="handleSubmit(event)">
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Margaret Thompson" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="you@example.com" required>
+    </div>
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <select id="subject">
+        <option>Question about a product</option>
+        <option>Order or shipping inquiry</option>
+        <option>Refund or return</option>
+        <option>General inquiry</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="How can we help you?" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Send Message</button>
+    <div class="success-msg" id="success">
+      Thank you for reaching out. We'll get back to you within 1–2 business days.
+    </div>
+  </form>
+
+  <div class="info-box">
+    <h2>Other Ways to Reach Us</h2>
+    <p>📧 Email: <a href="mailto:contact@wellness-50-plus.com">contact@wellness-50-plus.com</a></p>
+    <p>⏱ Response time: 1–2 business days</p>
+    <p style="margin-top:14px;font-size:13px;color:var(--text-light)">For questions about a specific product order, refund, or shipping, please contact the vendor directly through the order confirmation email you received.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Wellness50Plus.com &nbsp;|&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms.html">Terms of Use</a> &nbsp;|&nbsp; <a href="/contact.html">Contact</a></p>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('success').style.display = 'block';
+  e.target.reset();
+}
+</script>
+</body>
+</html>
